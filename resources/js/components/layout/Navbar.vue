@@ -4,6 +4,8 @@
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
             <v-toolbar-title><router-link class="route-link" :to="{ name: 'home' }">Expense Tracker</router-link></v-toolbar-title>
+            <v-spacer></spacer>
+            <a class="route-link" href="https://github.com/jxh0414com/laravel-vue-expense.tracker">Github</a>
         </v-app-bar>
 
         <v-navigation-drawer v-model="drawer" absolute temporary style="width: 350px">
