@@ -5,7 +5,7 @@
 
             <v-toolbar-title><router-link class="route-link" :to="{ name: 'home' }">Expense Tracker</router-link></v-toolbar-title>
             <v-spacer></v-spacer>
-            <a class="route-link" href="https://github.com/jxh0414com/laravel-vue-expense.tracker">Github</a>
+            <a class="route-link" href="https://github.com/jxh0414com/laravel-vue-expense.tracker"><v-icon>mdi-xml</v-icon>Github</a>
         </v-app-bar>
 
         <v-navigation-drawer v-model="drawer" absolute temporary style="width: 350px">
