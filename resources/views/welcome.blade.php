@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
 
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet" >
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet" >
         <!-- Styles -->
     </head>
     <body>
@@ -19,6 +19,6 @@
             <router-view class="container"></router-view>
         </v-app>
 
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ secure_asset('js/app.js') }}"></script>
     </body>
 </html>
