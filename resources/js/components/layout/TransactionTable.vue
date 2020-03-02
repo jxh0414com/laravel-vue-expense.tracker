@@ -76,6 +76,7 @@
             ...mapActions(['deleteTransaction']),
             submit() {
                 this.deleteTransaction({ id: this.selected[0].id}).then(() => {
+                    this.selected = [];
                     this.dialog = false;
                 })
             }
