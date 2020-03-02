@@ -69,7 +69,7 @@
                     { text: 'Location', value: 'location' },
                 ],
                 selected: [],
-                dialog: false
+                dialog: false,
             }
         },
         methods: {

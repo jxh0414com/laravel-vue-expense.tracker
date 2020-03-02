@@ -2612,6 +2612,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.deleteTransaction({
         id: this.selected[0].id
       }).then(function () {
+        _this.selected = [];
         _this.dialog = false;
       });
     }
