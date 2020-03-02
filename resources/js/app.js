@@ -16,6 +16,11 @@ import store from './store/store'
 import Navbar from './components/layout/Navbar'
 
 store.dispatch('loadUser', localStorage.getItem('token')).then(() => {
+    if (localStorage.getItem('token')) {
+        setTimeout(function() {
+            store.dispatch(store.dispatch('logout', localStorage.getItem('token')))
+        }, 1000 * 60 * 60)
+    }
     new Vue({
         el: '#app',
         router,

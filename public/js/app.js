@@ -2383,7 +2383,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         date: new Date().toISOString().substr(0, 10),
         location: ""
       },
-      on: [{
+      onChoice: [{
         text: "Housing",
         value: "Housing"
       }, {
@@ -2652,7 +2652,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.logout[data-v-040e2ab9] {\n    position: fixed;\n    right: 15px;\n    top: 75px\n}\n", ""]);
+exports.push([module.i, "\n.logout[data-v-040e2ab9] {\n    position: absolute;\n    right: 15px;\n    top: 75px\n}\n", ""]);
 
 // exports
 
@@ -21447,7 +21447,7 @@ var render = function() {
                                 [
                                   _c("v-select", {
                                     attrs: {
-                                      items: _vm.on,
+                                      items: _vm.onChoice,
                                       label: "On?",
                                       required: ""
                                     },
@@ -79586,6 +79586,12 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuetify__WEBPACK_IMPORTED_MODULE_
 
 
 _store_store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('loadUser', localStorage.getItem('token')).then(function () {
+  if (localStorage.getItem('token')) {
+    setTimeout(function () {
+      _store_store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch(_store_store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('logout', localStorage.getItem('token')));
+    }, 1000 * 60 * 60);
+  }
+
   new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     el: '#app',
     router: _router__WEBPACK_IMPORTED_MODULE_3__["default"],

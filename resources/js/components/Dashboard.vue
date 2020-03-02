@@ -77,7 +77,7 @@
 
 <style scoped>
     .logout {
-        position: fixed;
+        position: absolute;
         right: 15px;
         top: 75px
     }
