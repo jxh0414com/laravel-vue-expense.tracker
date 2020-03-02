@@ -15,7 +15,7 @@
                             <v-col cols="12">
                                 <v-select
                                         v-model="transaction.on"
-                                        :items="on"
+                                        :items="onChoice"
                                         label="On?"
                                         required
                                 ></v-select>
@@ -108,7 +108,7 @@
                     date: new Date().toISOString().substr(0, 10),
                     location: ""
                 },
-                on: [
+                onChoice: [
                     { text: "Housing", value: "Housing" },
                     { text: "Food", value: "Food" },
                     { text: "Groceries", value: "Groceries" },
