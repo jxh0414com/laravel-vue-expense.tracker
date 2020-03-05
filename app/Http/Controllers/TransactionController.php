@@ -65,9 +65,13 @@ class TransactionController extends Controller
 
     public function getTotal(getTotalRequest $request) {
         // Incoming validated
-        $transaction = Transaction::whereOn($request['on'])->get();
+        $user = auth()->user();
+        $transaction = Transaction::where([
+            ['user_id' => $user->id],
+            ['on' => $request['on']]
+        ])->get();
 
-        $total = Transaction::_getTotal($transaction);
+        $total = Transaction::_getTotal($user, $transaction);
 
         return response()->json(['total' => number_format($total, 2)]);
     }
